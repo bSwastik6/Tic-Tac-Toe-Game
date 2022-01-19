@@ -6,6 +6,7 @@ char player = 'X';
 
 void Draw()
 {
+    system("cls");
     cout<<"Tic Tac Toe Game v1.0"<<endl;
     for(int i=0;i<3;i++)
     {
@@ -20,7 +21,7 @@ void Draw()
 void Input()
 {
     int a;
-    cout<<"Press the number of field";
+    cout<<"Press the number of field: ";
     cin>>a;
 
     if(a==1)
@@ -57,14 +58,14 @@ char Win()
 {
     // First Player
 
-    if(matrix[0][0] == 'X' && matrix[0][1] == 'X' && matrix[0][0] == 'X')
+    if(matrix[0][0] == 'X' && matrix[0][1] == 'X' && matrix[0][2] == 'X')
         return 'X';
-    else if(matrix[1][0] == 'X' && matrix[1][1] == 'X' && matrix[1][0] == 'X')
+    else if(matrix[1][0] == 'X' && matrix[1][1] == 'X' && matrix[1][2] == 'X')
         return 'X';
-    else if(matrix[2][0] == 'X' && matrix[2][1] == 'X' && matrix[2][0] == 'X')
+    else if(matrix[2][0] == 'X' && matrix[2][1] == 'X' && matrix[2][2] == 'X')
         return 'X';
-    else if(matrix[0][0] == 'X' && matrix[1][0] == 'X' && matrix[2][0] == 'X')
-        return 'X';
+    // else if(matrix[0][0] == 'X' && matrix[1][0] == 'X' && matrix[2][2] == 'X')
+    //     return 'X';
     
     else if(matrix[0][0] == 'X' && matrix[1][0] == 'X' && matrix[2][0] == 'X')
         return 'X';
@@ -80,14 +81,14 @@ char Win()
     
     // Second Player
 
-    if(matrix[0][0] == 'X' && matrix[0][1] == 'X' && matrix[0][0] == 'X')
+    if(matrix[0][0] == 'X' && matrix[0][1] == 'X' && matrix[0][2] == 'X')
         return 'O';
-    else if(matrix[1][0] == 'X' && matrix[1][1] == 'X' && matrix[1][0] == 'X')
+    else if(matrix[1][0] == 'X' && matrix[1][1] == 'X' && matrix[1][2] == 'X')
         return 'O';
-    else if(matrix[2][0] == 'X' && matrix[2][1] == 'X' && matrix[2][0] == 'X')
+    else if(matrix[2][0] == 'X' && matrix[2][1] == 'X' && matrix[2][2] == 'X')
         return 'O';
-    else if(matrix[0][0] == 'X' && matrix[1][0] == 'X' && matrix[2][0] == 'X')
-        return 'O';
+    // else if(matrix[0][0] == 'X' && matrix[1][0] == 'X' && matrix[2][0] == 'X')
+    //     return 'O';
     
     else if(matrix[0][0] == 'X' && matrix[1][0] == 'X' && matrix[2][0] == 'X')
         return 'O';
@@ -102,9 +103,9 @@ char Win()
         return 'O';
     
     return '/';
+}
 
-int main()
-{
+int main(){
     Draw();
     while(1)
     {
