@@ -79,25 +79,23 @@ char Win()
     
     // Second Player
 
-    if(matrix[0][0] == 'X' && matrix[0][1] == 'X' && matrix[0][2] == 'X')
+    if(matrix[0][0] == 'O' && matrix[0][1] == 'O' && matrix[0][2] == 'O')
         return 'O';
-    if(matrix[1][0] == 'X' && matrix[1][1] == 'X' && matrix[1][2] == 'X')
+    if(matrix[1][0] == 'O' && matrix[1][1] == 'O' && matrix[1][2] == 'O')
         return 'O';
-    if(matrix[2][0] == 'X' && matrix[2][1] == 'X' && matrix[2][2] == 'X')
-        return 'O';
-    // else if(matrix[0][0] == 'X' && matrix[1][0] == 'X' && matrix[2][0] == 'X')
-    //     return 'O';
-    
-    if(matrix[0][0] == 'X' && matrix[1][0] == 'X' && matrix[2][0] == 'X')
-        return 'O';
-    if(matrix[0][1] == 'X' && matrix[1][1] == 'X' && matrix[2][1] == 'X')
-        return 'O';
-    if(matrix[0][2] == 'X' && matrix[1][2] == 'X' && matrix[2][2] == 'X')
+    if(matrix[2][0] == 'O' && matrix[2][1] == 'O' && matrix[2][2] == 'O')
         return 'O';
     
-    if(matrix[0][0] == 'X' && matrix[1][1] == 'X' && matrix[2][2] == 'X')
+    if(matrix[0][0] == 'O' && matrix[1][0] == 'O' && matrix[2][0] == 'O')
         return 'O';
-    if(matrix[2][0] == 'X' && matrix[1][1] == 'X' && matrix[0][2] == 'X')
+    if(matrix[0][1] == 'O' && matrix[1][1] == 'O' && matrix[2][1] == 'O')
+        return 'O';
+    if(matrix[0][2] == 'O' && matrix[1][2] == 'O' && matrix[2][2] == 'O')
+        return 'O';
+    
+    if(matrix[0][0] == 'O' && matrix[1][1] == 'O' && matrix[2][2] == 'O')
+        return 'O';
+    if(matrix[2][0] == 'O' && matrix[1][1] == 'O' && matrix[0][2] == 'O')
         return 'O';
     
     return '/';
